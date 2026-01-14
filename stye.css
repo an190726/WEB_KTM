@@ -1,168 +1,162 @@
-/* Reset cơ bản */
+/* 1. Thiết lập cơ bản (Reset CSS) */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 body {
-    background-color: #f8f9fa;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
 }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Header & Banner */
-.hero-section {
-    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
+/* 2. Banner và Tiêu đề chính */
+.main-title {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
                 url('499770443_1094221609407201_5931733604122087139_n.jpg');
     background-size: cover;
     background-position: center;
-    height: 350px;
-    display: flex;
-    align-items: flex-end;
-    padding-bottom: 50px;
+    color: white;
+    min-height: 250px;
+    margin-bottom: -100px; /* Đẩy nội dung bên dưới lên đè lên banner */
 }
 
-/* Card Wrapper */
-.card-wrapper {
+/* 3. Container chứa nội dung */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 50px 20px;
+}
+
+/* 4. Cấu trúc Cards */
+.card-container {
     display: flex;
     gap: 20px;
-    justify-content: center;
-    transform: translateY(150px); /* Đẩy card xuống dưới đè lên phần trắng */
+    margin-bottom: 60px;
+    position: relative; /* Đảm bảo nổi lên trên banner */
 }
 
 .card {
     background: white;
-    padding: 30px 20px;
-    border-radius: 4px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    text-align: left;
     flex: 1;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-.icon-circle {
-    width: 50px;
-    height: 50px;
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-box {
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     margin-bottom: 20px;
+    font-size: 20px;
 }
 
-.blue-bg { background-color: #00a8ff; }
-.green-bg { background-color: #2ecc71; }
-.orange-bg { background-color: #fbc531; }
+/* Màu sắc icon và nút trong card */
+.blue-bg { background-color: #00bcd4; }
+.green-bg { background-color: #4caf50; }
+.orange-bg { background-color: #ff9800; }
 
 .card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    color: #333;
+    font-size: 18px;
+    margin-bottom: 12px;
 }
 
 .card p {
-    font-size: 0.9rem;
+    font-size: 14px;
     color: #666;
-    line-height: 1.6;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
-/* Buttons chung */
-.btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
+.btn-go {
+    display: inline-block;
+    padding: 8px 20px;
+    text-decoration: none;
     color: white;
-    cursor: pointer;
-    font-weight: bold;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
 }
 
-.btn-blue { background-color: #00a8ff; }
-.btn-green { background-color: #2ecc71; }
-.btn-orange { background-color: #fbc531; }
-
-/* Basic Elements Section */
-.basic-elements {
-    margin-top: 250px; /* Tạo khoảng trống vì card bị đẩy xuống */
+/* 5. Phần Basic Elements & Buttons */
+.elements-section {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-.basic-elements h2 {
-    margin-bottom: 30px;
-    color: #444;
+.section-title {
+    font-size: 24px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
 }
 
-.btn-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
+.sub-title {
+    font-size: 18px;
+    color: #888;
     margin: 20px 0;
 }
 
-.btn-outline-blue {
-    padding: 10px 20px;
-    border: 1px solid #00a8ff;
-    background: transparent;
-    color: #00a8ff;
-    border-radius: 4px;
+.button-row, .link-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
-.btn-filled-blue {
+/* Kiểu dáng Buttons */
+.btn {
     padding: 10px 20px;
-    background: #00a8ff;
     border: none;
-    color: white;
+    cursor: pointer;
+    font-size: 14px;
     border-radius: 4px;
+    transition: 0.2s;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #00bcd4;
+    color: #00bcd4;
+}
+
+.btn-filled {
+    background: #00bcd4;
+    color: white;
 }
 
 .btn-round {
-    padding: 10px 25px;
-    border: 1px solid #00a8ff;
-    color: #00a8ff;
+    background: #00bcd4;
+    color: white;
     border-radius: 30px;
-    background: white;
+    padding: 10px 25px;
 }
 
-.btn-icon {
-    padding: 10px 20px;
-    background: #00a8ff;
-    color: white;
-    border: none;
-    border-radius: 20px;
-}
-
-.btn-circle-heart {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #00a8ff;
-    color: white;
-    border: none;
-}
-
-.simple-link {
+.btn-simple {
+    background: none;
+    color: #00bcd4;
     text-decoration: none;
-    color: #00a8ff;
-    font-size: 0.9rem;
-}
-
-/* Link Row */
-.link-row {
-    margin-top: 30px;
-    display: flex;
-    gap: 20px;
-    font-size: 0.85rem;
     font-weight: bold;
 }
 
-.p-link { color: #00a8ff; }
-.s-link { color: #888; }
-.suc-link { color: #2ecc71; }
-.dan-link { color: #e74c3c; }
-.war-link { color: #f1c40f; }
+/* Màu sắc các link phía dưới */
+.link-btn {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight
