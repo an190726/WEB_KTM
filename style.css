@@ -14,7 +14,7 @@ body {
 .container {
   max-width: 1200px;
   margin: auto;
-  background: #ffffff;
+  background-color: #ffffff;
   padding: 20px;
   display: flex;
   gap: 30px;
@@ -41,10 +41,10 @@ body {
 /* ẢNH NHỎ */
 .small-img {
   width: 100%;
-  height: 70px;
+  height: 80px;
   object-fit: cover;
   margin-bottom: 15px;
-  background-color: #ccc;
+  border-radius: 4px;
 }
 
 /* ===== CỘT PHẢI ===== */
@@ -71,10 +71,10 @@ body {
 /* ẢNH LỚN */
 .main-img {
   width: 100%;
-  height: 280px;
+  height: 300px;
   object-fit: cover;
   margin-bottom: 15px;
-  background-color: #ccc;
+  border-radius: 4px;
 }
 
 /* RESPONSIVE */
