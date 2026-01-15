@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    background-color: #f1f1f1;
+}
+
+/* Container chứa cả 2 cột */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+/* Cột bên trái (Side) */
+.side {
+    flex: 30%; /* Chiếm khoảng 30% chiều rộng */
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+/* Cột bên phải (Main) */
+.main {
+    flex: 70%; /* Chiếm khoảng 70% chiều rộng */
+    padding: 20px;
+}
+
+/* Tạo các ô màu xám giả lập hình ảnh theo đề bài */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Responsive: Khi màn hình nhỏ (điện thoại), 2 cột sẽ xếp chồng lên nhau */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
